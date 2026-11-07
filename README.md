@@ -6,7 +6,7 @@ Live support: https://bilgekagan.tr
 Donate: https://www.buymeacoffee.com/senyigit 
 
 -----------------------------------------------------------------------------
-Latest version V3.1.0 (21.10.2023)
+Latest version V3.1.0 (07.11.2026)
  - Fixed the existing errors:
    - Fixed `NameError: name 's' is not defined. Did you mean: 'st'?` -> Checked if the com port was opened, else it will throw error and exit
    - Fixed `NameError: name 'camera' is not defined` -> moved it into the `st` dict

@@ -1,55 +1,75 @@
-DJI CONTOROLLER FOR PC 
+DJI Mavic 3 RC231 (RC-N3) to Gamepad Interface
 
-===============
-Live support: https://bilgekagan.tr
+This project allows you to connect your DJI Mavic 3 RC231 (RC-N1) remote controller to your PC via a USB serial port and emulate a virtual gamepad (vgamepad or vjoy). This is useful for using your drone controller in simulators or other PC applications.
 
-Donate: https://www.buymeacoffee.com/senyigit 
+Prerequisites
 
------------------------------------------------------------------------------
-Latest version V1 (07.11.2026)
- - Fixed the existing errors:
-   - Fixed `NameError: name 's' is not defined. Did you mean: 'st'?` -> Checked if the com port was opened, else it will throw error and exit
-   - Fixed `NameError: name 'camera' is not defined` -> moved it into the `st` dict
- - Added an option to use vJoy as driver
- - Upgraded the command arguments:
-   - Now actually using the `--port` argument. The script will search for the correct port if you leave `--port` argument away, else it will try to open the port you supplied
-   - Added `--driver` for selecting if you want to use `vgamepad` or `vjoy`
-   - Added `--device` (`-d`) for selecting vJoy device (if using `vjoy` as `--driver`)
-   - Added `--invert` (`-i`) for telling the software which inputs it should invert
- - Changed the CAM slider to release buttons when its value is inbetween the checked values (instead of when the slider is at 0)
- - Added error messages for when packages are missing. These messages include the command to install the missing package.
------------------------------------------------------------------------------
+Make sure you have Python installed on your system. You will also need to install the required Python packages depending on which driver you plan to use.
 
- - Connect your DJI Remote Controller to your PC and use it to play simulators
- - Confirmed DJI Mavic 3 RC231
- - Confirmed DJI Mini 3 RC-N1 RC- N3
------------------------------------------------------------------------------
+Required Libraries
+
+pyserial (Required for serial communication)
+
+vgamepad (Default driver for Xbox 360 controller emulation) or pyvjoy (Alternative vJoy driver)
+
+You can install them via pip:
+
+pip install pyserial vgamepad
+# OR for vJoy:
+pip install pyserial pyvjoy
 
 
-This is a program that connects to your DJI Mavic 3 Remote Controller (RC-N1) as a XBox360 gamepad,
-reads the stick positions and tells Windows that position.
+Quick Start (Using start.bat)
 
------------------------------------------------------------------------------
-Installation / Usage
-- Install packages/software before usage:
-  - [dji-assistant-2-consumer-drones-series](https://www.dji.com/downloads/softwares/dji-assistant-2-consumer-drones-series) and close it after installation
-  - [python](https://www.python.org/) 3.9 or 3.x
-  - pyserial -> Install it using this command: `pip3 install pyserial` (or `pip install pyserial` if your system doesn't have python2 as well)
-  - a virtual joystick library:
-    - If you want to use vGamepad (easiest) run this command: `pip3 install vgamepad` (This will ALSO install the required driver)
-    - If you want to use vJoy run this command: `pip3 install vjoy` (This will NOT install the required driver, download it from https://github.com/njz3/vJoy/)
+To make starting the interface easy on Windows, a batch script has been provided.
 
-- Power on your RC-N3
-- Connect your controller via the bottom type-C USB
-- Wait for around 10 seconds
-- Run the `main.py` file
-  - When using `vgamepad`, you can just run `python3 main.py`
-  - When using `vjoy`, you'll have to run `python3 main.py --driver vjoy` (if you want to use a different device ID, add ` --device <index>` to the end)
-  - Note: It is most likely that this script will tell you `Couldn't find the COM port`, this is because the description of the controller is not correctly read by windows (or the controller has doesn't tell it).
-    If this is the case, you can tell the script to use the correct COM port instead. For this you will need to look up the correct COM port ID and add `-p <PORT_ID>` to the end of the command you're running. *`<PORT_ID>` looks like `COM3`*
-    For finding the COM port ID you must unplug your controller, open 'Device Manager', go to 'Ports (COM & LPT)' and plug in your controller and device manager should update and show you the newly added COM ports.
-    You need to use the FIRST COM port ID of those newly added devices. It should look like `COM3` where 3 can be any number.
-  - To see all the available arguments, run `python3 main.py --help`
-- Run your simulator
+Place start.bat in the same directory as main.py.
+
+Double-click start.bat (or run it from your command prompt) to launch the script automatically.
+
+Example start.bat Content
+
+@echo off
+TITLE DJI RC231 Gamepad Bridge
+python main.py
+pause
 
 
+If you need to specify a specific COM port or driver, you can edit the start.bat file and pass command-line arguments:
+
+@echo off
+python main.py --port COM3 --driver vgamepad
+pause
+
+
+Command Line Arguments
+
+You can configure the script using the following options:
+
+-p, --port: RC Serial Port (leave empty to auto-scan, e.g., COM3).
+
+--driver: Driver type (vgamepad or vjoy). Default is vgamepad.
+
+-d, --device: VJoy Device ID (Only needed when using the vjoy driver). Default is 1.
+
+-i, --invert: Invert axis (lv, lh, rv, rh, or cam). Default is ['lv', 'rv'].
+
+Usage Examples
+
+Run with auto-port detection and default settings:
+
+python main.py
+
+
+Run specifying a COM port and inverting specific axes:
+
+python main.py -p COM4 -i lv rv rh
+
+
+Controls & Features
+
+Sticks: Left and right joysticks map directly to the virtual gamepad axes.
+
+Camera Dial (cam):
+
+Pushing the camera dial past limits triggers special gamepad button presses (e.g., button Y to restart a race or button B to recover the drone in specific simulator setups).

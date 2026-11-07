@@ -1,4 +1,4 @@
-# DJI Mavic 3 RC231 (RC-N1) to Gamepad Interface
+# DJI REMOTE CONTROLLER FOR PC SIMULATIONS (RC-N3) to Gamepad Interface
 
 This project allows you to connect your DJI Mavic 3 RC231 (RC-N1) remote controller to your PC via a USB serial port and emulate a virtual gamepad (`vgamepad` or `vjoy`). This is useful for using your drone controller in simulators or other PC applications.
 

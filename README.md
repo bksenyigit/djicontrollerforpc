@@ -1,38 +1,4 @@
 DJI CONTOROLLER FOR PC 
-                     r6IAAAAAAAEWiv                                  
-                v1AAAAAAAAAAAAAAAAAAAIm                              
-             v1AAAAAAAAAAAAAIR1661WNIAAAIm                           
-           vNAAAAAAAAAAN0               0NEi                         
-          WAAAAAAAAAEi                     rRr                       
-        vEAAAAAAAAA6                          r                      
-       mAAAAAAAAAAi                                                  
-      mAAAAAAAAAA0                                   mI              
-      NAAAAAAAAA6                                    mAAv            
-     0AAAAAAAAAN                                     mAAAd    mIA6   
-     IAAAAAAAAAAW                                    mAAAAAAAAAAm    
-     EAAAAAAAAAm                                  mdIAAAAAAAAAN      
-    vAAAAAAAAN                                0AAAAAAAAAAAAAAR       
-     EAAAAAA1                                     d6EAAAAAAAAAN      
-     IAAAAAA6                                        rAAAAAAAAAAm    
-     6AAAAAAAAAm                                     rAAA6   riNA6   
-      IAAAAAAAAi                                     rAAm            
-      mAAAAAAAAA                                     rA              
-       mAAAAAAAd                                                     
-        rEAAAAAm                              r                      
-          NAAAAAIdmr                       vRm                       
-           vIAAAAAAAAAANi               mWE0                         
-             vRAAAAAAAAAAAERRW16606WNEAAEd                           
-                mWAAAAAAAAAAAAAAAAAAAEd                              
-                    rdWEAAAAAAAAN6mv                                 
- " ___  ________  ___  ________   ________  _______       ___    ___ ___  ________     ";
- "|\  \|\_____  \|\  \|\   ___  \|\   ___ \|\  ___ \     |\  \  /  /|\  \|\_____  \    ";
- "\ \  \\|___/  /\ \  \ \  \\ \  \ \  \_|\ \ \   __/|    \ \  \/  / \ \  \\|___/  /|   ";
- " \ \  \   /  / /\ \  \ \  \\ \  \ \  \ \\ \ \  \_|/__   \ \    / / \ \  \   /  / /   ";
- "  \ \  \ /  /_/__\ \  \ \  \\ \  \ \  \_\\ \ \  \_|\ \   \/  /  /   \ \  \ /  /_/__  ";
- "   \ \__|\________\ \__\ \__\\ \__\ \_______\ \_______\__/  / /      \ \__|\________\";
- "    \|__|\|_______|\|__|\|__| \|__|\|_______|\|_______|\___/ /        \|__|\|_______|";
- "                                                      \|___|/                        ";  
-
 
 ===============
 Live support: https://bilgekagan.tr

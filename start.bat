@@ -1,5 +1,5 @@
 @echo OFF
-Title Earth ASCII Animation
+Title Turkiye
 color 4
                                                                       
 @echo                              r6IAAAAAAAEWiv                                  
@@ -27,7 +27,7 @@ color 4
 @echo                      vRAAAAAAAAAAAERRW16606WNEAAEd                           
 @echo                         mWAAAAAAAAAAAAAAAAAAAEd                              
 @echo                             rdWEAAAAAAAAN6mv                                 
-@echo    ___  ________  ___  ________   ________  _______       ___    ___ ___  ________     
+@echo  "  ___  ________  ___  ________   ________  _______       ___    ___ ___  ________      "; 
 @echo  " |\  \|\_____  \|\  \|\   ___  \|\   ___ \|\  ___ \     |\  \  /  /|\  \|\_____  \     ";
 @echo  " \ \  \\|___/  /\ \  \ \  \\ \  \ \  \_|\ \ \   __/|    \ \  \/  / \ \  \\|___/  /|    ";
 @echo  "  \ \  \   /  / /\ \  \ \  \\ \  \ \  \ \\ \ \  \_|/__   \ \    / / \ \  \   /  / /    ";
